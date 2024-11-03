@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login|Farm Tech Innovate</title>
+</head>
+<body>
+    <!-- header -->
+    <header style="background-image: url(img/Lote.jpg)"> 
+        <!--container-->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logomenor.png" alt="logo Farm Tech Innovate">
+                </a>
+                <ul class="ul">
+                   <a href="solucoes.html">Nossas soluções</a>
+                   <a href="trabalhe.html">Trabalhe conosco</a>
+                   <a href="contato.html">Contato</a>
+                   <a class="btn" href="login.html">Login</a>   
+                   <div class="close-icon" onclick="closeMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                      </svg>
+                   </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                      </svg>
+                </div>      
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Cultivando Tradições e colhendo qualidade.</h1>
+                    <p> Seja pioneiro na segurança alimentar conosco, nossa startup oferece soluções inovadoras para garantir qualidade e procedência dos alimentos, junte-se a nós para tranquilizar consumidores, aumentar eficiência e promover saúde pública.</p>
+                </div>
+
+            </section> 
+        </div>
+        <!--end container-->
+    </header>
+    <!-- end header -->
+    <section class="login">
+        <div class="container">
+            <div class="login" id="page">
+                <h1> Acesse a plataforma</h1>
+                <p>Faça login ou resgistre-se</p>
+                <form>
+                <div class="input-wrapper">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email"  name="email" required>
+                </div>
+
+                <div class="input-wrapper">
+                    <label-wrapper class="label-wrapper-flex">  
+                    <label for="senha">
+                        Senha
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                    </label-wrapper>
+                </div>
+                <input type="password" id="senha">
+                <img onclink="togglePassword()" class=" eye" src="img/eye.svg" alt="olhos habilitados">
+                <img onclink="togglePassword()" class="eye hide" src="img/eye-off.svg" alt="olhos desabilitados">
+                <button type="submit">Entrar</button>
+
+                <div class="create-acconte">Ainda não tem conta?
+                    <a href="#">Increva-se</a>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- contato -->
+     <section class="contato">
+        <div class="container"> 
+          <div class="contatotext">
+            <h1>Contato</h1>
+            <p>(11) 3547-0406</p> 
+            <p>FarmTechInnovate@gmail.com</p>          
+          </div>  
+          <div class="contato-img">
+            <img src="img/Rectangle 14.png" alt="agricultor" > 
+          </div>      
+        </div>
+     </section>
+     <!-- end contato -->
+        </div>
+      </section>
+      <script>
+        function togglePassword(){
+        document.querySelectorAll(".eye").forEach((eye)=>
+            eye.classList.toggle('hide'))
+        }
+      </script>
+</body>
+</html>

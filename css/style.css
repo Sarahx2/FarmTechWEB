@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    -webkit-front-smoothing: antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+body{
+    background-color: #212121;
+}
+
+section,
+footer{
+    padding: 54px 0;
+}
+h1{color: white;}
+h3{
+    font-size: 50px;
+}
+p{
+    color: white;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn{
+    background-color: #808080;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.btn:hover{
+    background-color:white ;
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: black;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: black;
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+} 
+nav ul a:hover::after{
+    width: 100%;
+}
+/*menu mobile*/
+nav .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: black;
+    display: none;
+}
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+}
+
+/*fim-menu mobile*/
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 40px;
+}
+.banner .banner-text h1{
+    font-size: 40px;
+}
+.banner .banner-text p{
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 18px 0; 
+}
+/* Quem somos*/
+.quem-somos .container{
+    display: flex;
+    align-items: center;
+}
+.quem-somos .quemsomostext{
+    width: 50%;
+    padding: 0 40px;
+    h1{
+        font-size: 40px;
+    }
+    p{
+    margin: 5px 0 10px 0;
+    }
+}
+.quem-somos .quemsomos-img{
+    width: 50%;
+    padding: 0 40px;
+}
+.quem-somos .quemsomos-img img{
+    width: 80%;
+}
+/* Somos especialistas em:*/
+.especialistas{
+    border-radius: 14px;
+    h1{
+        text-align: left;
+        width: 50%;
+        padding: 0 40px;
+    }
+    p{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.cards{ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.especialistas .card-item img{
+border-radius: 100px;
+}
+
+.contato .container{
+
+    display: flex;
+    align-items: center;
+}
+.contato .contatotext{
+    padding: 15px 40px;
+    width: 100%;
+    h1{
+        font-size: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+    p{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+}
+.contato .contato-img{
+    width: 50%;
+    padding: 0 40px;
+}
+.contato .contato-img img{
+    width: 80%;
+}
+/* Pag.Trabalhe*/
+.Trabalhe h1{
+text-align: center;
+}
+.Trabalhe .container > p{
+    text-align: center;
+}
+.Trabalhe .rows-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+.Trabalhe .row-card-item{
+    background-color: #808080;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+
+}
+/* End Pag.Trabalhe*/
+/* Pag.Contato*/
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contato-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #808080; 
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .right-side input{
+    display: flex;
+    justify-content: right;
+}
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    resize: 100%;
+    border-radius: 9PX;
+}
+/* End Contato*/
+@media(max-width:830px){
+    .ul {
+        position: fixed;
+        top:0;
+        left: 0;
+        background-color: #212121;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: 0.7s;
+    }
+    .ul.open{
+        clip-path: circle(141.4% at 100% 0);  
+    }
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+    nav .close-icon{
+        color: white;
+        display: block ;
+        position: absolute;
+        top: 45px;
+        right: 28px;
+    }
+    .quem-somos .quemsomostext{
+        margin-top: 10px;
+        padding: 0 20px;
+        order:1;
+        h1{
+            font-size: 48px;
+        }
+    } 
+    .quem-somos .container{
+        flex-direction: column;
+    }
+    .quem-somos, .quemsomos-img{
+        width:100%;
+    }
+    .banner .banner-text{
+        padding: 0;
+        margin: 80px;
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    .contato .contato-info, .contato-img{
+        padding: 0;
+        margin: 80px;
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 15px;
+        } 
+    }
+}
+
+#page{
+    height: 100vh;
+    width: 100%;
+    
+}
+#page >*{
+    width: 100%;
+}
+.login .container{
+    padding: 4rem 11.2rem;
+    margin: 100px;
+
+}
+form{
+    margin-top: 4rem;
+}
+form input{
+    width: 100%;
+    background: white;
+    border: 0.1rem solid #e2e8f0;
+    border-radius: 0.4rem;
+    padding: 1.6rem 1.2rem;
+    margin-top: 0.8rem;
+}
+form button{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+    background-color: #808080;
+    border-radius: 4px;
+    width: 90%;
+    font-weight: bold;
+    color: white;
+    margin-block: 3.2rem;
+}
+form button:active,
+form button:hover,
+form button:focus{
+    outline: 2px solid white;
+    border-radius: 0.4rem;
+    background-color: #212121;
+}
+form .input-whapper + .input-whapper{
+    margin-top: 1.6rem;
+}
+.input-whapper{
+    position: relative;
+}
+
+.label-whapper{
+  justify-content: space-between;
+}
+.eye{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 209%;
+    right: 23%;
+    color: black;
+}
+
+ 
